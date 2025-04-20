@@ -64,7 +64,7 @@ const AttendanceTable = () => {
         <h2>Attendance</h2>
         <div className="controls">
           <select
-            className="status-select"
+            className="status-dropdown"
             value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value)}
           >

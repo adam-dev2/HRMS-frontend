@@ -5,6 +5,7 @@ import Login from './components/Login'
 import CandidateDashboard from './components/CandidateDashboard'
 import EmployeeDashboard from './components/EmployeeDashboard'
 import AttendanceDashboard from './components/AttendanceDashboard'
+import LeaveDashboard from './components/LeaveDashboard'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/CandidateDashboard' element={<CandidateDashboard />} />
         <Route path='/EmployeeDashboard' element={<EmployeeDashboard />} />
         <Route path='/AttendanceDashboard' element={<AttendanceDashboard />} />
+        <Route path='/LeaveDashboard' element={<LeaveDashboard />} />
        </Routes>
      </Router>
     </>

@@ -15,7 +15,7 @@ const Sidebar = () => {
       items: [
         { path: '/EmployeeDashboard', label: 'Employees', icon: '🧑‍💼' },
         { path: '/AttendanceDashboard', label: 'Attendance', icon: '📊' },
-        { path: '/leaves', label: 'Leaves', icon: '✨' },
+        { path: '/LeaveDashboard', label: 'Leaves', icon: '✨' },
       ],
     },
     {

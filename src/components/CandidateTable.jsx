@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import AddCandidate from '../components/AddCandidate'; 
+import AddCandidate from '../components/AddCandidate';
 import './CandidateTable.css';
 
 const Candidates = () => {
@@ -10,6 +10,7 @@ const Candidates = () => {
   const [refresh, setRefresh] = useState(false);
   const [showAddModal, setShowAddModal] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
+  const [statusFilter, setStatusFilter] = useState(''); 
 
   const handleStatusChange = async (id, newStatus) => {
     try {
@@ -20,8 +21,8 @@ const Candidates = () => {
         headers: {
           authorization: `Bearer ${token}`,
         },
-      });      
-  
+      });
+
       setCandidates(prev =>
         prev.map(c =>
           c._id === id ? { ...c, status: newStatus } : c
@@ -31,7 +32,6 @@ const Candidates = () => {
       console.error("Failed to update status", err);
     }
   };
-  
 
   const toggleDropdown = (id) => {
     setActiveDropdown((prev) => (prev === id ? null : id));
@@ -72,14 +72,16 @@ const Candidates = () => {
     fetchCandidates();
   }, [refresh]);
 
-  // Filter based on search term
   const filteredCandidates = candidates.filter((c) => {
     const term = searchTerm.toLowerCase();
-    return (
+    const matchesSearch =
       c.fullname?.toLowerCase().includes(term) ||
       c.email?.toLowerCase().includes(term) ||
-      c.phonenumber?.toLowerCase().includes(term)
-    );
+      c.phonenumber?.toLowerCase().includes(term);
+
+    const matchesStatus = statusFilter ? c.status.toLowerCase() === statusFilter : true;
+
+    return matchesSearch && matchesStatus;
   });
 
   return (
@@ -87,7 +89,11 @@ const Candidates = () => {
       <div className="header">
         <h2>Candidates</h2>
         <div className="controls">
-          <select className="status-dropdown">
+          <select
+            className="status-dropdown"
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value)} 
+          >
             <option value="">Status</option>
             <option value="new">New</option>
             <option value="ongoing">Ongoing</option>
