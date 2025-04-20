@@ -1,0 +1,146 @@
+.candidates {
+  flex: 1;
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.info {
+  color: #5d007f;
+  width: 100%;
+  text-align: center;
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info h2 {
+  margin: 0;
+}
+
+.add-btn {
+  background-color: #5d007f;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #5d007f;
+  color: white;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.status-select {
+  padding: 6px 50px 6px 14px;
+  border-radius: 999px;
+  border: 2px solid #ccc;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: transparent;
+  color: black;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='30,50 70,90 110,50' stroke='%23000' stroke-width='20' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.status-dropdown {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+}
+
+.status-dropdown.ongoing {
+  border-color: #1a7f37;
+  color: #1a7f37;
+}
+
+.status-dropdown.selected {
+  border-color: #8b2bd2;
+  color: #8b2bd2;
+}
+
+.status-dropdown.rejected {
+  border-color: #d32f2f;
+  color: #d32f2f;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.action-wrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  min-width: 150px;
+  padding: 8px 0;
+}
+
+.dropdown a,
+.dropdown button {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: left;
+  font-size: 14px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+  background-color: #f0f0f0;
+}

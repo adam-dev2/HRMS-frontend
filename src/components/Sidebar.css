@@ -1,0 +1,87 @@
+.sidebar {
+    width: 240px;
+    background-color: white;
+    padding: 20px;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #5d007f;
+    margin-bottom: 20px;
+  }
+  
+  .logo-box {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5d007f;
+    border-radius: 4px;
+  }
+  
+  .search {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  
+  .section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .section li {
+    margin-bottom: 10px;
+  }
+  
+  .section li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  
+  .section li a:hover {
+    background-color: #f0ebff;
+    color: #6c2bd9;
+  }
+  
+  .section li.active a {
+    background-color: #f0ebff;
+    color: #6c2bd9;
+    font-weight: bold;
+  }
+  
+  .icon {
+    font-size: 16px;
+  }
+  
+  .label {
+    font-size: 14px;
+  }
+  
