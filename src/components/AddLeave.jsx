@@ -48,7 +48,7 @@ const AddLeave = ({ onClose, setRefresh, Employees }) => {
     data.append('resume', resume);
 
     try {
-      await axios.post('http://localhost:5000/api/leave/create', data, {
+      await axios.post('https://hrms-backend-muyw.onrender.com/api/leave/create', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,

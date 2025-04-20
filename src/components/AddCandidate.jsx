@@ -51,7 +51,7 @@ const AddCandidate = ({ onClose,setRefresh }) => {
     data.append('resume', resume);
     console.log(data.fullname)
     try {
-      const res = await axios.post('http://localhost:5000/api/candidate/create', data, {
+      const res = await axios.post('https://hrms-backend-muyw.onrender.com/api/candidate/create', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
           authorization: `Bearer ${token}`,

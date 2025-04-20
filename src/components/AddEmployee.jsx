@@ -41,7 +41,7 @@ const AddEmployee = ({ onClose, setRefresh }) => {
 
     const token = localStorage.getItem('token');
     try {
-      const res = await axios.post('http://localhost:5000/api/employee/create', formData, {
+      const res = await axios.post('https://hrms-backend-muyw.onrender.com/api/employee/create', formData, {
         headers: {
           authorization: `Bearer ${token}`,
         },

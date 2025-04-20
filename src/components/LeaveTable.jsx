@@ -15,7 +15,7 @@ const LeaveTable = () => {
   const fetchLeaves = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:5000/api/leave', {
+      const res = await axios.get('https://hrms-backend-muyw.onrender.com/api/leave', {
         headers: { authorization: `Bearer ${token}` },
       });
       setLeaves(res.data.Leaves);
@@ -29,7 +29,7 @@ const LeaveTable = () => {
   const fetchEmployees = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:5000/api/employee', {
+      const res = await axios.get('https://hrms-backend-muyw.onrender.com/api/employee', {
         headers: { authorization: `Bearer ${token}` },
       });
       setEmployees(res.data.Employees);
@@ -96,7 +96,7 @@ const LeaveTable = () => {
                 <td>
                   {l.documents ? (
                     <a
-                      href={`http://localhost:5000/${l.documents.replace(/\\/g, '/')}`}
+                      href={`https://hrms-backend-muyw.onrender.com/${l.documents.replace(/\\/g, '/')}`}
                       target="_blank"
                       rel="noreferrer"
                     >

@@ -33,7 +33,7 @@ const EmployeeTable = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/employee/delete/${id}`, {
+      await axios.delete(`https://hrms-backend-muyw.onrender.com/api/employee/delete/${id}`, {
         headers: { authorization: `Bearer ${token}` },
       });
       setEmployees((prev) => prev.filter((e) => e._id !== id));
@@ -46,7 +46,7 @@ const EmployeeTable = () => {
   const fetchEmployees = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:5000/api/employee', {
+      const res = await axios.get('https://hrms-backend-muyw.onrender.com/api/employee', {
         headers: { authorization: `Bearer ${token}` },
       });
       setEmployees(res.data.Employees);

@@ -15,7 +15,7 @@ const Candidates = () => {
   const handleStatusChange = async (id, newStatus) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:5000/api/candidate/edit/${id}`, {
+      await axios.put(`https://hrms-backend-muyw.onrender.com/api/candidate/edit/${id}`, {
         status: newStatus,
       }, {
         headers: {
@@ -40,7 +40,7 @@ const Candidates = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/candidate/delete/${id}`, {
+      await axios.delete(`https://hrms-backend-muyw.onrender.com/api/candidate/delete/${id}`, {
         headers: {
           authorization: `Bearer ${token}`,
         },
@@ -55,7 +55,7 @@ const Candidates = () => {
   const fetchCandidates = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:5000/api/candidate', {
+      const res = await axios.get('https://hrms-backend-muyw.onrender.com/api/candidate', {
         headers: {
           authorization: `Bearer ${token}`,
         },
@@ -158,7 +158,7 @@ const Candidates = () => {
                 <td>{c.experience}</td>
                 <td>
                   {c.resume ? (
-                    <a href={`http://localhost:5000/${c.resume}`} target="_blank" rel="noreferrer">
+                    <a href={`https://hrms-backend-muyw.onrender.com/${c.resume}`} target="_blank" rel="noreferrer">
                       View
                     </a>
                   ) : (
@@ -172,7 +172,7 @@ const Candidates = () => {
                       <div className="dropdown">
                         {c.resume ? (
                           <a
-                            href={`http://localhost:5000/${c.resume}`}
+                            href={`https://hrms-backend-muyw.onrender.comw/${c.resume}`}
                             target="_blank"
                             rel="noreferrer"
                           >

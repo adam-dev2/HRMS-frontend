@@ -11,7 +11,7 @@ const AttendanceTable = () => {
   const fetchEmployees = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:5000/api/employee', {
+      const res = await axios.get('https://hrms-backend-muyw.onrender.com/api/employee', {
         headers: { authorization: `Bearer ${token}` },
       });
       setEmployees(res.data.Employees);
@@ -26,7 +26,7 @@ const AttendanceTable = () => {
     try {
       const token = localStorage.getItem('token');
       const res = await axios.put(
-        `http://localhost:5000/api/employee/attendance/${id}`,
+        `https://hrms-backend-muyw.onrender.com/api/employee/attendance/${id}`,
         { attendance: status },
         {
           headers: { authorization: `Bearer ${token}` },
