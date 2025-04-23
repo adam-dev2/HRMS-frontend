@@ -8,29 +8,9 @@ import AttendanceDashboard from './components/AttendanceDashboard'
 import LeaveDashboard from './components/LeaveDashboard'
 
 const App = () => {
-  const router=createBrowserRouter(createRoutesFromElements(
-    <Route path='/' element={<Parent></Parent>}>
-        <Route path='/regis' element={<Registration />} />
-        <Route path='/login' element={<Login />} />
-    </Route>
-  ))
   return (
     <>
-     
-     <RouterProvider router={router}></RouterProvider>
-    </>
-  )
-}
-const Parent=()=>{
-  return(
-    <>
-    <h1>hi</h1>
-    <Outlet></Outlet>
-    </>
-  )
-}
-export default App
-{/* <Router>
+     <Router>
        <Routes>
         <Route path='/' element={<Registration />} />
         <Route path='/login' element={<Login />} />
@@ -40,4 +20,8 @@ export default App
         <Route path='/LeaveDashboard' element={<LeaveDashboard />} />
        </Routes>
        
-     </Router> */}
+     </Router>
+    </>
+  )
+}
+export default App
