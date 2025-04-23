@@ -16,17 +16,7 @@ const App = () => {
   ))
   return (
     <>
-     {/* <Router>
-       <Routes>
-        <Route path='/' element={<Registration />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/CandidateDashboard' element={<CandidateDashboard />} />
-        <Route path='/EmployeeDashboard' element={<EmployeeDashboard />} />
-        <Route path='/AttendanceDashboard' element={<AttendanceDashboard />} />
-        <Route path='/LeaveDashboard' element={<LeaveDashboard />} />
-       </Routes>
-       
-     </Router> */}
+     
      <RouterProvider router={router}></RouterProvider>
     </>
   )
@@ -40,3 +30,14 @@ const Parent=()=>{
   )
 }
 export default App
+{/* <Router>
+       <Routes>
+        <Route path='/' element={<Registration />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/CandidateDashboard' element={<CandidateDashboard />} />
+        <Route path='/EmployeeDashboard' element={<EmployeeDashboard />} />
+        <Route path='/AttendanceDashboard' element={<AttendanceDashboard />} />
+        <Route path='/LeaveDashboard' element={<LeaveDashboard />} />
+       </Routes>
+       
+     </Router> */}
