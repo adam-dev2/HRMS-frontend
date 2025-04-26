@@ -6,6 +6,7 @@ import CandidateDashboard from './components/CandidateDashboard'
 import EmployeeDashboard from './components/EmployeeDashboard'
 import AttendanceDashboard from './components/AttendanceDashboard'
 import LeaveDashboard from './components/LeaveDashboard'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
