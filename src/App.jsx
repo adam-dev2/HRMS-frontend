@@ -1,5 +1,4 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route, createBrowserRouter, createRoutesFromChildren, createRoutesFromElements, Outlet, RouterProvider } from 'react-router-dom';
 import Registration from './components/Registration'
 import Login from './components/Login'
 import CandidateDashboard from './components/CandidateDashboard'
